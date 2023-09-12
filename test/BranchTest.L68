@@ -1,0 +1,42 @@
+00007000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.16.01
+Created On: 6/7/2021 11:15:01 PM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      :
+00000000                             3  * Written by :
+00000000                             4  * Date       :
+00000000                             5  * Description:
+00000000                             6  *-----------------------------------------------------------
+00007000                             7      ORG    $7000
+00007000                             8  START:                  ; first instruction of program
+00007000                             9  
+00007000                            10  * Put program code here
+00007000  7206                      11       MOVE.L #6,D1
+00007002  6000 000E                 12       BRA Forward
+00007006                            13  Backward
+00007006  143C 0008                 14      MOVE.B #8,D2
+0000700A  B23C 0006                 15      CMP.B #6,D1
+0000700E  6700 000C                 16      BEQ END
+00007012                            17      
+00007012                            18  Forward
+00007012  143C 0007                 19      MOVE.B #7,D2
+00007016  B43C 0007                 20      CMP.B #7,D2
+0000701A  67EA                      21      BEQ Backward
+0000701C  103C 0009                 22  END MOVE.B #9,D0
+00007020  4E4F                      23      TRAP #15
+00007022                            24  * Put variables and constants here
+00007022                            25  
+00007022                            26      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+BACKWARD            7006
+END                 701C
+FORWARD             7012
+START               7000
