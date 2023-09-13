@@ -1,5 +1,5 @@
 # CSS422-Hardware-Disassembler
-A program using Easy68K to convert sets of binary machine language back into assembly instructions and display it on the console to the user
+A program using Easy68K to convert sets of binary machine numbers back into assembly instructions and display it on the console to the user
 ## How to run the program
 First, you will need to do the following steps:
 1. Open the FinalProjectMain.S68, this is your source code.
